@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  backgroundColor: string,
   description: JSX.Element;
 };
 
@@ -12,6 +13,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'TCM Target Organ Prediction',
     Svg: require('@site/static/img/target-tools.svg').default,
+    backgroundColor: '#06949F',
     description: (
       <>
         Predicting the potential effective organs of compounds/TCMs (combination of multiple compounds) based on the corresponding target(s).
@@ -23,6 +25,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'TCM Flavor Preciction',
     Svg: require('@site/static/img/flavor-tools.svg').default,
+    backgroundColor: '#EB6D73',
     description: (
       <>
         Predicting the potential flavors of compounds/TCMs (combination of multiple compounds) based on SMILES.
@@ -34,6 +37,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'TCM Toxicity Prediction',
     Svg: require('@site/static/img/toxicity-tools.svg').default,
+    backgroundColor: '#262626',
     description: (
       <>
         Predicting the potential toxicity of compounds/TCMs (combination of multiple compounds) by inputting SMILES.
@@ -44,10 +48,10 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, backgroundColor}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+      <div className="text--center" style={{backgroundColor: backgroundColor}}>
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">

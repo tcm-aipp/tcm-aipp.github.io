@@ -18,6 +18,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/docs/faq" style={{margin: '0 10px'}}>Tutorial / FAQ</Link>
+          <Link className="button button--secondary button--lg" to="https://tcm-aipp.com" style={{margin: '0 10px'}}>Web Service Link</Link>
         </div>
       </div>
     </header>
