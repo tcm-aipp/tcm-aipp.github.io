@@ -14,7 +14,7 @@ Herein, the TCM Artificial Intelligence-Powered Platform (TCM-AIPP) has been dev
 <p style={{textAlign: "justify"}}>
 Uncovering the properties of TCM is of great importance for both clinical applications and TCM-derived drug R&D. TCM-AIPP may help to facilitate the recognition of the properties of TCMs, explain the underlying mechanisms of TCM against various human diseases, and provide guidance for TCM practitioners.
 </p>
-
+![home](../img/img_home.png)
 
 <div align="center">Figure 1. Overview framework of TCM-AIPP</div>
 
