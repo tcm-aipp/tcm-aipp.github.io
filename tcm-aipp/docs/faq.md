@@ -86,7 +86,7 @@ The flavor prediction model of TCM-AIPP was constructed using the RF algorithm. 
 Then, the flavors of TCM were predicted by weighted averaging the compounds' flavors, especially the index compounds recorded by the Chinese Pharmacopoeia 2020 and the other compounds were assigned different weights. The predictive performance of this model was evaluated based on 558 TCMs with the flavor records in the Chinese Pharmacopoeia 2020 and the corresponding 19,068 compounds obtained from BATMAN-TCM. If the actual flavors of a certain TCM are included in the top three predicted flavors of the model (it is generally known that a single TCM have up to 3 flavors), the result may be considered to be true-positive.
 </p>
 <div align="center">Table 2. Basic information of TCM flavor prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
   <tr>
     <td>Flavors</td>
     <td>Flavors of compounds</td>
@@ -124,7 +124,7 @@ The toxicity prediction model of TCM-AIPP was constructed using the GAT algorith
 Two prediction models for acute toxicity were developed for different application scenarios based on rat and mouse using the LD50 data collected from the TOXRIC database and the toxicity classification criteria referring to the Globally Harmonized System of Classification and Labelling of Chemicals. To minimize the risk of false negatives and to reduce overfitting, both the Random Oversampling and Adaptive Synthetic Sampling Algorithm (ADASYN) were used to improve the classification accuracy for a few classes of chemicals. The results of the two sampling algorithms are both available on the platform.
 </p>
 <div align="center">Table 3. Basic information of TCM acute toxicity prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
   <tr>
     <td>Prediction Type</td>
     <td>Lethal Dose value in mg/kg body weight (Rat and Mouse)</td>
@@ -157,7 +157,7 @@ Two prediction models for acute toxicity were developed for different applicatio
 
 <div align="center">Table 4. Definition of the acute toxicity levels</div>
 
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th colspan="1">Acute Toxicity Level</th>
     <th colspan="1">GHS (Oral LD50 mg/kg)</th>
@@ -190,7 +190,7 @@ Two prediction models for acute toxicity were developed for different applicatio
 
 
 <div align="center">Table 5. Comparison of the two sampling algorithms</div>
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Feature</th>
     <th>Random Oversampling</th>
@@ -228,7 +228,7 @@ Two prediction models for acute toxicity were developed for different applicatio
 Accumulating studies have reported the cardiotoxicity induced by drugs, which may be usually associated with the inhibition of human ether-à-go-go-related gene (hERG). hERG genes encode proteins that form potassium channels in the membranes of cardiomyocytes, which are essential for normal electrical activity of the heart, especially during the repolarization phase. Many drugs can inadvertently inhibit hERG channels, causing abnormal repolarization of the heart, which lead to arrhythmias and even sudden death. To construct the cardiotoxicity prediction model for TCM-AIPP, compounds with hERG inhibition values were obtained from the ChEMBL database and categorized into four classes of cardiotoxicity based on their IC50 value.
 </p>
 <div align="center">Table 6. Basic information of TCM cardiotoxicity prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
   <tr>
     <td>Prediction&nbsp;Type</td>
     <td>Compounds induced cardiotoxicity</td>
@@ -260,7 +260,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 <div align="center">Table 7. Definition of the hERG inhibition levels</div>
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Levels</th>
     <th>hERG inhibition values [IC50 (μM)]</th>
@@ -286,7 +286,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 #### 2.4.3 Hepatotoxicity
 <div align="center">Table 8. Basic information of TCM hepatotoxicity prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
   <tr>
     <td>Prediction Type</td>
     <td>Compounds induced hepatotoxicity</td>
@@ -314,7 +314,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 #### 2.4.4 Nephrotoxicity
-<div align="center">Table 9. Basic information of TCM flavor prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
 <table style={{borderCollapse: "collapse", width: "100%"}}>
   <tr>
     <td>Prediction Type</td>
@@ -344,7 +344,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 #### 2.4.5 Neurotoxicity
 <div align="center">Table 10. Basic information of TCM neurotoxicity prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
   <tr>
     <td>Prediction Type</td>
     <td>Compounds induced neurotoxicity</td>
@@ -373,7 +373,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 #### 2.4.6 Respiratory Toxicity
 <div align="center">Table 11. Basic information of TCM respiratory prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
   <tr>
     <td>Prediction Type</td>
     <td>Compounds induced respiratory toxicity</td>
@@ -537,7 +537,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 <div align="center">Table 13. Predictive performance of TCM target organ prediction model </div>
 
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Organ</th>
     <th>Dataset</th>
@@ -927,6 +927,8 @@ TCM-AIPP is capable of processing a single input of up to 3000 targets or 1000 S
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Users can select any tool they want to predict TCM target organs, flavors and toxicities from the left side of the Home page or the Services page. The Home page offers a more convenient option, while the Services page provides basic information about each tool.
 </p>
+
+![](../img/Q1.png)
 
 #### 3.4.1 TCM Target Organ Prediction
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
