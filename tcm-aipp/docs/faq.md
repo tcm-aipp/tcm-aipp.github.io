@@ -53,27 +53,27 @@ To validate the performance of the model, we collected effective target data wit
 
 <table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr>
-    <td>Organs</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Organs</td>
     <td>Cerebellum, Heart, Kidney, Liver, Lung, Pancreas, Retina, Skeletal muscle, Testis</td>
   </tr>
   <tr>
-    <td>Algorithmic&nbsp;Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic&nbsp;Model</td>
     <td>Graph Attention Network (3)</td>
   </tr>
   <tr>
-    <td>End Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End Point</td>
     <td>Probability score of TCM effective target acting on a certain organ</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Human protein interaction network</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>685 targets</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(2)</td>
   </tr>
 </table>
@@ -988,7 +988,7 @@ Please note: the targets should be entered with quotes and that multiple entries
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "CC%28C%29%2FC%3DC%2FCCCCC%28%3DO%29NCC1%3DCC%28%3DC%28C%3DC1%29O%29OC"</code></pre>
+
 </p>
 
 **For TCM Toxicity Prediction**
@@ -999,7 +999,7 @@ Please note: the SMILES strings should be entered with quotes and that multiple 
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "COC1%3DCC2%3DC%28C%3DCN%3DC2C%3DC1%29%5BC%40H%5D%28%5BC%40%40H%5D3C%5BC%40%40H%5D4CCN3C%5BC%40%40H%5D4C%3DC%29O"</code></pre>
+
 </p>
 
 
