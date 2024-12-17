@@ -88,27 +88,27 @@ Then, the flavors of TCM were predicted by weighted averaging the compounds' fla
 <div align="center">Table 2. Basic information of TCM flavor prediction tool</div>
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
-    <td>Flavors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Flavors</td>
     <td>Flavors of compounds</td>
   </tr>
   <tr>
-    <td>Algorithmic Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic Model</td>
     <td>Random Forest (4)</td>
   </tr>
   <tr>
-    <td>End Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End Point</td>
     <td>Sour, Bitter, Sweet, Pungent, Salty</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>1595 compounds</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(4-6)</td>
   </tr>
 </table>
@@ -126,31 +126,31 @@ Two prediction models for acute toxicity were developed for different applicatio
 <div align="center">Table 3. Basic information of TCM acute toxicity prediction tool</div>
 <table style={{borderCollapse: "collapse", width: "50%", margin: "0 auto"}}>
   <tr>
-    <td>Prediction Type</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
     <td>Lethal Dose value in mg/kg body weight (Rat and Mouse)</td>
   </tr>
   <tr>
-    <td>Algorithmic Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic Model</td>
     <td>Graph Attention Network (8)</td>
   </tr>
   <tr>
-    <td>End Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End Point</td>
     <td>Toxicity level from GHS (I, II, III, IV, V, VI)</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>9734 compounds (Rat); 21,831 compounds (Mouse)</td>
   </tr>
   <tr>
-    <td>Data Sampling</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sampling</td>
     <td>Random Oversampling and ADASYN</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(7)</td>
   </tr>
 </table>
@@ -230,31 +230,31 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 <div align="center">Table 6. Basic information of TCM cardiotoxicity prediction tool</div>
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
-    <td>Prediction&nbsp;Type</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Prediction&nbsp;Type</td>
     <td>Compounds induced cardiotoxicity</td>
   </tr>
   <tr>
-    <td>Algorithmic&nbsp;Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic&nbsp;Model</td>
     <td>Graph Attention Network (8)</td>
   </tr>
   <tr>
-    <td>End&nbsp;Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End&nbsp;Point</td>
     <td>Toxicity level by IC50 (I, II, III, IV)</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>8418 compounds</td>
   </tr>
   <tr>
-    <td>Data&nbsp;Sampling</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data&nbsp;Sampling</td>
     <td>ADASYN</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(9,10)</td>
   </tr>
 </table>
@@ -288,27 +288,27 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 <div align="center">Table 8. Basic information of TCM hepatotoxicity prediction tool</div>
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
-    <td>Prediction Type</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
     <td>Compounds induced hepatotoxicity</td>
   </tr>
   <tr>
-    <td>Algorithmic Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic Model</td>
     <td>Graph Attention Network (8)</td>
   </tr>
   <tr>
-    <td>End Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End Point</td>
     <td>Positive/Negative</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>2411 compounds</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(5,7,11-15)</td>
   </tr>
 </table>
@@ -317,27 +317,27 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 <div align="center">Table 9. Basic information of TCM nephrotoxicity prediction tool</div>
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
-    <td>Prediction Type</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
     <td>Compounds induced nephrotoxicity</td>
   </tr>
   <tr>
-    <td>Algorithmic Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic Model</td>
     <td>Graph Attention Network (8)</td>
   </tr>
   <tr>
-    <td>End Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End Point</td>
     <td>Positive/Negative</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>821 compounds</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(11,16-19)</td>
   </tr>
 </table>
@@ -346,27 +346,27 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 <div align="center">Table 10. Basic information of TCM neurotoxicity prediction tool</div>
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
-    <td>Prediction Type</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
     <td>Compounds induced neurotoxicity</td>
   </tr>
   <tr>
-    <td>Algorithmic Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic Model</td>
     <td>Graph Attention Network (8)</td>
   </tr>
   <tr>
-    <td>End Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End Point</td>
     <td>Positive/Negative</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>757 compounds</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(11,16,20-22)</td>
   </tr>
 </table>
@@ -375,27 +375,27 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 <div align="center">Table 11. Basic information of TCM respiratory prediction tool</div>
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
-    <td>Prediction Type</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
     <td>Compounds induced respiratory toxicity</td>
   </tr>
   <tr>
-    <td>Algorithmic Model</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Algorithmic Model</td>
     <td>Graph Attention Network (8)</td>
   </tr>
   <tr>
-    <td>End Point</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>End Point</td>
     <td>Positive/Negative</td>
   </tr>
   <tr>
-    <td>Descriptors</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Descriptors</td>
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Standard Dataset</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Standard Dataset</td>
     <td>1760 compounds</td>
   </tr>
   <tr>
-    <td>Data Sources</td>
+    <td style={{backgroundColor: "#009999", color: "white"}}>Data Sources</td>
     <td>(7,23,24)</td>
   </tr>
 </table>
@@ -977,7 +977,7 @@ Please note: the targets should be entered with quotes and that multiple entries
 
 <p style={{ textAlign: "justify"}}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m1 -o output.csv "TP53"</code></pre>
+  <pre><code>python tcmaipp_api.py -m m1 -o output.csv "Target"</code></pre>
 </p>
 
 **For TCM Flavor Prediction**
@@ -988,7 +988,7 @@ Please note: the targets should be entered with quotes and that multiple entries
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-
+  <pre><code>python tcmaipp_api.py -m m2 -o output.csv "SMILES"</code></pre>
 </p>
 
 **For TCM Toxicity Prediction**
@@ -999,7 +999,7 @@ Please note: the SMILES strings should be entered with quotes and that multiple 
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-
+  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "SMILES"</code></pre>
 </p>
 
 
