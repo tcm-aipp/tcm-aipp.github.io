@@ -975,9 +975,36 @@ Please enter the Official gene symbol or Entrez ID for the query in order to pro
 Please note: the targets should be entered with quotes and that multiple entries should be separated with commas.
 </p>
 
-<p style={{ textAlign: "justify", textIndent: "2em" }}>
-  Example:<code>python tcmaipp_api.py -m m1 -o output.csv "TP53"</code>
+<p style={{ textAlign: "justify"}}>
+
+    Example: 
+    <pre>python tcmaipp_api.py -m m1 -o output.csv "TP53"</pre>
 </p>
+
+**For TCM Flavor Prediction**
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+ Please enter the SMILES strings for the query in order to proceed with this command. 
+ Please note: the SMILES strings should be entered with quotes and that multiple entries should be separated with commas.
+ </p>
+
+<p style={{ textAlign: "justify" }}>
+
+    Example: 
+    <pre>python tcmaipp_api.py -m m3 -o output.csv "CC(C)/C=C/CCCCC(=O)NCC1=CC(=C(C=C1)O)OC"</pre>
+</p>
+
+**For TCM Toxicity Prediction**
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+Please enter the SMILES strings for the query in order to proceed with this command. 
+Please note: the SMILES strings should be entered with quotes and that multiple entries should be separated with commas.
+</p>
+
+<p style={{ textAlign: "justify"}}>
+
+    Example: 
+    <pre>python tcmaipp_api.py -m m3 -o output.csv "COC1=CC2=C(C=CN=C2C=C1)[C@H]([C@@H]3C[C@@H]4CCN3C[C@@H]4C=C)O"</pre>
+</p>
+
 
 ## 5. References
 1.	Morselli Gysi, D., do Valle, I., Zitnik, M., Ameli, A., Gan, X., Varol, O., Ghiassian, S.D., Patten, J.J., Davey, R.A., Loscalzo, J. et al. (2021) Network medicine framework for identifying drug-repurposing opportunities for COVID-19. Proc Natl Acad Sci U S A, 118.
