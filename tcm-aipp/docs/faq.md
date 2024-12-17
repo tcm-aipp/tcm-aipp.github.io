@@ -17,14 +17,14 @@ Uncovering the properties of TCM is of great importance for both clinical applic
 ![](../img/img_home.png)
 <div align="center">Figure 1. Overview framework of TCM-AIPP</div>
 
-## 1.1 Highlights
+### 1.1 Highlights
 <p style={{ textAlign: "justify" }}>
     <strong>①</strong> TCM-AIPP is the first web server for TCM property research<br />
     <strong>②</strong> TCM-AIPP integrated the specific characteristics of TCMs to enhance its prediction performance<br />
     <strong>③</strong> TCM-AIPP provides an intuitive interface and customizable network visualizations, facilitating the exploration of TCM-related bioinformation
 </p>
 
-## 1.2 Citations
+### 1.2 Citations
 <p style={{ textAlign: "justify" }}>
     <strong>①</strong> Zhang Y, Li X, Shi Y, Chen T, Xu Z, Wang P, Yu M, Chen W, Li B, Jing Z, Jiang H, Fu L, Gao W, Jiang Y, Du X, Gong Z, Zhu W, Yang H, Xu H. ETCM v2.0: An update with comprehensive resource and rich annotations for traditional Chinese medicine. Acta Pharm Sin B. 2023 Jun;13(6):2559-2571. [doi: 10.1016/j.apsb.2023.03.012](https://pubmed.ncbi.nlm.nih.gov/37425046/)<br />
     <strong>②</strong> Xu HY, Zhang YQ, Liu ZM, Chen T, Lv CY, Tang SH, Zhang XB, Zhang W, Li ZY, Zhou RR, Yang HJ, Wang XJ, Huang LQ. ETCM: an encyclopaedia of traditional Chinese medicine. Nucleic Acids Res. 2019 Jan 8;47(D1):D976-D982. [doi: 10.1093/nar/gky987](https://pubmed.ncbi.nlm.nih.gov/30365030/)<br />
@@ -51,7 +51,7 @@ To validate the performance of the model, we collected effective target data wit
 </p>
 <div align="center">Table 1. Basic information of TCM target organ prediction tool</div>
 
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr>
     <td>Organs</td>
     <td>Cerebellum, Heart, Kidney, Liver, Lung, Pancreas, Retina, Skeletal muscle, Testis</td>
@@ -154,6 +154,8 @@ Two prediction models for acute toxicity were developed for different applicatio
     <td>(7)</td>
   </tr>
 </table>
+
+<div align="center">Table 4. Definition of the acute toxicity levels</div>
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
