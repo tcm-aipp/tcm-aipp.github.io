@@ -86,7 +86,7 @@ The flavor prediction model of TCM-AIPP was constructed using the RF algorithm. 
 Then, the flavors of TCM were predicted by weighted averaging the compounds' flavors, especially the index compounds recorded by the Chinese Pharmacopoeia 2020 and the other compounds were assigned different weights. The predictive performance of this model was evaluated based on 558 TCMs with the flavor records in the Chinese Pharmacopoeia 2020 and the corresponding 19,068 compounds obtained from BATMAN-TCM. If the actual flavors of a certain TCM are included in the top three predicted flavors of the model (it is generally known that a single TCM have up to 3 flavors), the result may be considered to be true-positive.
 </p>
 <div align="center">Table 2. Basic information of TCM flavor prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
+<table style={{borderCollapse: "collapse", width: "100%", margin: "0 auto"}}>
   <tr>
     <td>Flavors</td>
     <td>Flavors of compounds</td>
@@ -399,7 +399,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-### 2.5 Standard Datasets for Model Construction and Performance Evaluation
+### 2.5 Standard Datasets for Model Construction
 <div align="center">Table 12. Detailed information of the standard datasets</div>
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
@@ -532,7 +532,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 
-### 2.6 Model Performance
+### 2.6 Model Performance Evaluation
 
 <div align="center">Table 13. Predictive performance of TCM target organ prediction model </div>
 
