@@ -4,8 +4,6 @@ sidebar_position: 01
 
 ## 1. Introduction
 
-## 1. Introduction
-
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
     The property theory of traditional Chinese medicine (TCM) is a unique medical theory based on extensive clinical practice for thousands of years, guiding TCM practitioners in choosing proper medicines to treat specific diseases. The target organs, flavors, and toxicities of TCM are a high generalization of the drug's characteristics according to the property theory. Despite intensive investigations, the accurate identification of TCM properties still confronts several challenges, which greatly hampers the clinical rational application and novel drug discovery of TCM.
 </p>
@@ -16,7 +14,7 @@ Herein, the TCM Artificial Intelligence-Powered Platform (TCM-AIPP) has been dev
 Uncovering the properties of TCM is of great importance for both clinical applications and TCM-derived drug R&D. TCM-AIPP may help to facilitate the recognition of the properties of TCMs, explain the underlying mechanisms of TCM against various human diseases, and provide guidance for TCM practitioners.
 </p>
 
-
+<img src="../img/img_home.png">
 <div align="center">Figure 1. Overview framework of TCM-AIPP</div>
 
 ## 2. Model Info
