@@ -2,93 +2,88 @@
 sidebar_position: 01
 ---
 
-# FAQ
+## 1. Introduction
 
 ## 1. Introduction
-<p style={{textAlign: "justify"}}>
+
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
     The property theory of traditional Chinese medicine (TCM) is a unique medical theory based on extensive clinical practice for thousands of years, guiding TCM practitioners in choosing proper medicines to treat specific diseases. The target organs, flavors, and toxicities of TCM are a high generalization of the drug's characteristics according to the property theory. Despite intensive investigations, the accurate identification of TCM properties still confronts several challenges, which greatly hampers the clinical rational application and novel drug discovery of TCM.
 </p>
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 Herein, the TCM Artificial Intelligence-Powered Platform (TCM-AIPP) has been developed leveraging state-of-the-art deep learning technologies. TCM-AIPP contains three predictive tools that not only identify the potential target organs, tastes and toxicities of TCM, but also provide comprehensive information on TCMs and corresponding compounds, including candidate target profiling and functional enrichment data. Notably, this web server offers flexible and diverse forms of network visualization, for which users can choose to display different relationships among herbs, compounds, targets, target organs, flavors, and toxicities according to their research aims, as well as design and modify the network nodes and edges at will.
 </p>
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 Uncovering the properties of TCM is of great importance for both clinical applications and TCM-derived drug R&D. TCM-AIPP may help to facilitate the recognition of the properties of TCMs, explain the underlying mechanisms of TCM against various human diseases, and provide guidance for TCM practitioners.
 </p>
-![home](../img/img_home.png)
+
 
 <div align="center">Figure 1. Overview framework of TCM-AIPP</div>
 
 ## 2. Model Info
 
 ### 2.1 Model information and validation
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 A total of three tools for predicting target organs, flavors and toxicities of TCMs were constructed and developed in the TCM-AIPP web server based on Random Forest (RF) machine learning and Graph Attention Network (GAT), respectively. These tools contain 19 prediction models, including 10 classification models and 9 regression models. For each endpoint, the dataset is randomly divided into training, validation (VAL) and test sets in the ratio of 8:1:1. The RF model is implemented using the tree ensemble learner and predictor nodes in KNIME, Gini coefficient is used for segmentation criteria, square root function is used for attribute sampling and different sets of attributes are selected for all trees. The GAT employs an Adam optimizer with hyperparameter tuning via Bayesian optimization. The regression task was assessed using the coefficient of determination (R2), root mean squared error (RMSE), and mean absolute error (MAE), whereas the classification task was evaluated based on accuracy, the area under the receiver operating characteristic (ROC-AUC) curve, Mathews correlation coefficient (MCC), precision, specificity and sensitivity. To guarantee the reliability and precision of the models, each training process was conducted 10 times, and the most effective models were then deployed to the online platform.
 </p>
-![acute](../img/acute_toxicity.jpg)
-
-
-
-
 
 ### 2.2 TCM target organ prediction
-
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 The TCM target organ prediction model was developed based on GAT, which aims to reveal the action tendency of TCM on different organs. The targets of TCM are complex and diverse, and their mechanisms of action are difficult to explain intuitively, so they need to be accurately predicted by systematic network analysis methods. This model can effectively predict the effects of TCM on specific organs by integrating the information of human protein-protein interaction (PPI) network (1) and the effective targets of TCM.
 </p>
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 The model was constructed based on a number of reliable data sources. Proteins specifically expressed in each organ were collected from The Human Protein Atlas. These proteins were screened for "Enhanced" and "High" levels of evidence, and occurring only once in all organs. To further substantiate the independence of organ target sets within the PPI network, a network separation analysis was employed to differentiate between organ-specific target sets. In the GAT, organ-specific targets were mapped to the PPI network, and interactions between protein nodes were analyzed through the graph attention mechanism to calculate the specificity scores of different protein nodes for each organ. The model weights integrate the organ-specific scores of each target according to the combination of the effective targets of the TCM, thereby more accurately predicting the tendency of the TCM to target specific organs.
 </p>
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 To validate the performance of the model, we collected effective target data with high-quality literature support from the HIT database, which demonstrated optimal prediction quality in several models. A total of 442 TCMs with documented organ effects, as recorded in the Chinese Pharmacopoeia, were subjected to extraction of their corresponding effective targets, amounting to a total of 64,795. During the validation process, if the actual organ of target of a TCM was located in the top three organs predicted by the model (a single TCM is known to target on up to 4 organs), the prediction was considered to be a true-positive result. The model was initially validated for the four organs of the liver, heart, lungs, and kidneys (as documented in the Pharmacopoeia) and achieved a more satisfactory model performance. Subsequently, the validation was extended to encompass modeling of additional organs, including the cerebellum, pancreas, retina, skeletal muscle, and testis. Notably, with the exception of the heart-skeletal muscle, the target sets of these organs showed significant topological separation in the PPI, which further enhanced the predictive performance of the model. 
 </p>
+<div align="center">Table 1. Basic information of TCM target organ prediction tool</div>
 
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">TCM Target Organ</th>
-  </tr>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
   <tr>
-    <td>Predition&nbsp;Type</td>
+    <td>Organs</td>
     <td>Cerebellum, Heart, Kidney, Liver, Lung, Pancreas, Retina, Skeletal muscle, Testis</td>
   </tr>
   <tr>
-    <td>End&nbsp;Point</td>
-    <td>Specific target score of each organ</td>
+    <td>Algorithmic&nbsp;Model</td>
+    <td>Graph Attention Network (3)</td>
+  </tr>
+  <tr>
+    <td>End Point</td>
+    <td>Probability score of TCM effective target acting on a certain organ</td>
   </tr>
   <tr>
     <td>Descriptors</td>
     <td>Human protein interaction network</td>
   </tr>
   <tr>
-    <td>Training&nbsp;Set</td>
+    <td>Standard Dataset</td>
     <td>685 targets</td>
   </tr>
   <tr>
-    <td>Reference</td>
+    <td>Data Sources</td>
     <td>(2)</td>
-  </tr>
-  <tr>
-    <td>Algorithmic&nbsp;Model</td>
-    <td>Graph Attention Network (3)</td>
   </tr>
 </table>
 
 ### 2.3 TCM flavor prediction
-<p style={{textAlign: "justify"}}>
-The flavor prediction model of TCM-AIPP was constructed based on VirtualTaste and constructed using the RF algorithm. This model analyzes the chemical similarity between compounds with known flavors, utilizing standard compound data from PubChem, VirtualTaste, and ChemTastesDB.
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+The flavor prediction model of TCM-AIPP was constructed using the RF algorithm. This model evaluates the chemical structural similarities between the input compounds and compounds with known flavors obtained from PubChem, VirtualTaste and ChemTastesDB.
 </p>
-<p style={{textAlign: "justify"}}>
-Then, the flavors of TCM were predicted by weighted averaging of their compound flavors, whereby the main compound and other compounds were assigned different weights. The weights were configured with reference to the index compounds in the Chinese Pharmacopoeia 2020 and optimized through a grid search. The model was validated by collecting 558 TCMs with flavor records in the Chinese Pharmacopoeia 2020 and the corresponding 19,068 compounds containing these TCMs from BATMAN-TCM. If the actual flavors of the target TCMs were among the top three predictions made by the model (a single TCM is known to have up to 3 flavors), they were considered to be true-positive results. 
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+Then, the flavors of TCM were predicted by weighted averaging the compounds' flavors, especially the index compounds recorded by the Chinese Pharmacopoeia 2020 and the other compounds were assigned different weights. The predictive performance of this model was evaluated based on 558 TCMs with the flavor records in the Chinese Pharmacopoeia 2020 and the corresponding 19,068 compounds obtained from BATMAN-TCM. If the actual flavors of a certain TCM are included in the top three predicted flavors of the model (it is generally known that a single TCM have up to 3 flavors), the result may be considered to be true-positive.
 </p>
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">TCM Flavor</th>
-  </tr>
+<div align="center">Table 2. Basic information of TCM flavor prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
   <tr>
-    <td>Predition&nbsp;Type</td>
+    <td>Flavors</td>
     <td>Flavors of compounds</td>
   </tr>
   <tr>
-    <td>End&nbsp;Point</td>
+    <td>Algorithmic Model</td>
+    <td>Random Forest (4)</td>
+  </tr>
+  <tr>
+    <td>End Point</td>
     <td>Sour, Bitter, Sweet, Pungent, Salty</td>
   </tr>
   <tr>
@@ -96,79 +91,90 @@ Then, the flavors of TCM were predicted by weighted averaging of their compound 
     <td>Molecular fingerprints</td>
   </tr>
   <tr>
-    <td>Training&nbsp;Set</td>
+    <td>Standard Dataset</td>
     <td>1595 compounds</td>
   </tr>
   <tr>
-    <td>Reference</td>
+    <td>Data Sources</td>
     <td>(4-6)</td>
   </tr>
-  <tr>
-    <td>Algorithmic&nbsp;Model</td>
-    <td>Random Forest (4)</td>
-  </tr>
 </table>
+
 
 ### 2.4 TCM toxicity prediction
-<p style={{textAlign: "justify"}}>
-The toxicity prediction model for TCM-AIPP is based on the GAT, which is constructed by analyzing the chemical similarity between compounds with the known toxicity. The compounds are characterized by a Morgan fingerprint with a radius of 2 and a bit number of 2048. TCM-AIPP can predict the risk of acute toxicity and common toxicities (including cardiotoxicity, hepatotoxicity, nephrotoxicity, neurotoxicity, and respiratory toxicity) of TCMs. Through the web server, users can predict the potential the toxic types of compounds and the risk of TCMs according to the number of toxic compounds in their chemical profiling. In addition, TCM-AIPP also provides the putative targets of the toxic compounds containing TCMs and their enriched biological functions and pathways. These data provide an important reference for the safety evaluation of TCMs and the investigation of the underlying toxic mechanisms.
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+The toxicity prediction model of TCM-AIPP was constructed using the GAT algorithm.  This model evaluates the chemical structural similarities between the input compounds and compounds with known toxicities obtained from TOXRIC, DIRIL, DrugBank and PubChem. On this basis, TCM-AIPP can predict the potential toxicities [acute and organ toxicities (including cardiotoxicity, hepatotoxicity, nephrotoxicity, neurotoxicity, and respiratory toxicity)] of the input compounds and the toxic risk of TCMs according to the number of toxic compounds in the chemical profiling. In addition, TCM-AIPP also provides the putative targets of the toxic compounds containing TCMs and their enriched biological functions and pathways. These data provide an important reference for the safety evaluation of TCMs and the investigation of the underlying toxic mechanisms.
 </p>
 
-#### Acute toxicity
-<p style={{textAlign: "justify"}}>
+#### 2.4.1 Acute toxicity
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 Two prediction models for acute toxicity were developed for different application scenarios based on rat and mouse using the LD50 data collected from the TOXRIC database and the toxicity classification criteria referring to the Globally Harmonized System of Classification and Labelling of Chemicals. To minimize the risk of false negatives and to reduce overfitting, both the Random Oversampling and Adaptive Synthetic Sampling Algorithm (ADASYN) were used to improve the classification accuracy for a few classes of chemicals. The results of the two sampling algorithms are both available on the platform.
 </p>
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">Acute toxicity</th>
-  </tr><tr>
-    <td>Predition&nbsp;Type</td>
-    <td>Lethal Dose value in mg/kg body weight（Rat and Mouse）</td>
-  </tr><tr>
-    <td>End&nbsp;Point</td>
-    <td>Toxicity level from GHS（I, II, III, IV, V, VI）</td>
-  </tr><tr>
-    <td>Descriptors</td>
-    <td>Molecular fingerprints</td>
-  </tr><tr>
-    <td>Training&nbsp;Set</td>
-    <td>9734 compounds (Rat); 21,831 compounds (Mouse)</td>
-  </tr><tr>
-    <td>Data&nbsp;sampling</td>
-    <td>Random Oversampling and ADASYN</td>
-  </tr><tr>
-    <td>Reference</td>
-    <td>(7)</td>
-  </tr><tr>
-    <td>Algorithmic&nbsp;Model</td>
+<div align="center">Table 3. Basic information of TCM acute toxicity prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
+  <tr>
+    <td>Prediction Type</td>
+    <td>Lethal Dose value in mg/kg body weight (Rat and Mouse)</td>
+  </tr>
+  <tr>
+    <td>Algorithmic Model</td>
     <td>Graph Attention Network (8)</td>
   </tr>
+  <tr>
+    <td>End Point</td>
+    <td>Toxicity level from GHS (I, II, III, IV, V, VI)</td>
+  </tr>
+  <tr>
+    <td>Descriptors</td>
+    <td>Molecular fingerprints</td>
+  </tr>
+  <tr>
+    <td>Standard Dataset</td>
+    <td>9734 compounds (Rat); 21,831 compounds (Mouse)</td>
+  </tr>
+  <tr>
+    <td>Data Sampling</td>
+    <td>Random Oversampling and ADASYN</td>
+  </tr>
+  <tr>
+    <td>Data Sources</td>
+    <td>(7)</td>
+  </tr>
 </table>
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">Acute Toxicity Level from GHS (Oral LD50 mg/kg)</th>
-  </tr><tr>
+    <th colspan="1">Acute Toxicity Level</th>
+    <th colspan="1">GHS (Oral LD50 mg/kg)</th>
+  </tr>
+  <tr>
     <td>I</td>
     <td>≤ 5</td>
-  </tr><tr>
+  </tr>
+  <tr>
     <td>II</td>
-    <td>5 < LD50 ≤ 50</td>
-  </tr><tr>
+    <td>5 &lt; LD50 ≤ 50</td>
+  </tr>
+  <tr>
     <td>III</td>
-    <td>50 < LD50 ≤ 300</td>
-  </tr><tr>
+    <td>50 &lt; LD50 ≤ 300</td>
+  </tr>
+  <tr>
     <td>IV</td>
-    <td>300 < LD50 ≤ 2000</td>
-  </tr><tr>
+    <td>300 &lt; LD50 ≤ 2000</td>
+  </tr>
+  <tr>
     <td>V</td>
-    <td>2000 < LD50 ≤ 5000</td>
-  </tr><tr>
+    <td>2000 &lt; LD50 ≤ 5000</td>
+  </tr>
+  <tr>
     <td>VI</td>
-    <td>＞ 5000</td>
+    <td>&gt; 5000</td>
   </tr>
 </table>
 
+
+<div align="center">Table 5. Comparison of the two sampling algorithms</div>
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Feature</th>
@@ -202,157 +208,186 @@ Two prediction models for acute toxicity were developed for different applicatio
   </tr>
 </table>
 
-#### Cardiotoxicity
-<p style={{textAlign: "justify"}}>
+#### 2.4.2 Cardiotoxicity
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 Accumulating studies have reported the cardiotoxicity induced by drugs, which may be usually associated with the inhibition of human ether-à-go-go-related gene (hERG). hERG genes encode proteins that form potassium channels in the membranes of cardiomyocytes, which are essential for normal electrical activity of the heart, especially during the repolarization phase. Many drugs can inadvertently inhibit hERG channels, causing abnormal repolarization of the heart, which lead to arrhythmias and even sudden death. To construct the cardiotoxicity prediction model for TCM-AIPP, compounds with hERG inhibition values were obtained from the ChEMBL database and categorized into four classes of cardiotoxicity based on their IC50 value.
 </p>
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">Cardiotoxicity </th>
+<div align="center">Table 6. Basic information of TCM cardiotoxicity prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
+  <tr>
+    <td>Prediction&nbsp;Type</td>
+    <td>Compounds induced cardiotoxicity</td>
   </tr>
   <tr>
-    <td>Predition&nbsp;Type</td>
-    <td>Compounds induced cardiotoxicity</td>
-  </tr><tr>
+    <td>Algorithmic&nbsp;Model</td>
+    <td>Graph Attention Network (8)</td>
+  </tr>
+  <tr>
     <td>End&nbsp;Point</td>
-    <td>Toxicity level by IC50（I, II, III, IV）</td>
-  </tr><tr>
+    <td>Toxicity level by IC50 (I, II, III, IV)</td>
+  </tr>
+  <tr>
     <td>Descriptors</td>
     <td>Molecular fingerprints</td>
-  </tr><tr>
-    <td>Training&nbsp;Set</td>
+  </tr>
+  <tr>
+    <td>Standard Dataset</td>
     <td>8418 compounds</td>
-  </tr><tr>
-    <td>Data&nbsp;sampling</td>
+  </tr>
+  <tr>
+    <td>Data&nbsp;Sampling</td>
     <td>ADASYN</td>
-  </tr><tr>
-    <td>Reference</td>
+  </tr>
+  <tr>
+    <td>Data Sources</td>
     <td>(9,10)</td>
-  </tr><tr>
-    <td>Algorithmic&nbsp;Model</td>
-    <td>Graph Attention Network (8)</td>
   </tr>
 </table>
 
+<div align="center">Table 7. Definition of the hERG inhibition levels</div>
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">hERG inhibition values level (IC50 (μM))</th>
-  </tr><tr>
+    <th>Levels</th>
+    <th>hERG inhibition values [IC50 (μM)]</th>
+  </tr>
+  <tr>
     <td>I</td>
-    <td>< 1</td>
-  </tr><tr>
+    <td>&lt; 1</td>
+  </tr>
+  <tr>
     <td>II</td>
-    <td>1 < IC50 ≤ 10</td>
-  </tr><tr>
+    <td>1 &lt; IC50 ≤ 10</td>
+  </tr>
+  <tr>
     <td>III</td>
-    <td>10 < IC50 ≤ 100</td>
-  </tr><tr>
+    <td>10 &lt; IC50 ≤ 100</td>
+  </tr>
+  <tr>
     <td>IV</td>
-    <td>> 100</td>
+    <td>&gt; 100</td>
   </tr>
 </table>
 
-#### Hepatotoxicity
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">Hepatotoxicity</th>
-  </tr><tr>
-    <td>Predition&nbsp;Type</td>
+
+#### 2.4.3 Hepatotoxicity
+<div align="center">Table 8. Basic information of TCM hepatotoxicity prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
+  <tr>
+    <td>Prediction Type</td>
     <td>Compounds induced hepatotoxicity</td>
-  </tr><tr>
-    <td>End&nbsp;Point</td>
+  </tr>
+  <tr>
+    <td>Algorithmic Model</td>
+    <td>Graph Attention Network (8)</td>
+  </tr>
+  <tr>
+    <td>End Point</td>
     <td>Positive/Negative</td>
-  </tr><tr>
+  </tr>
+  <tr>
     <td>Descriptors</td>
     <td>Molecular fingerprints</td>
-  </tr><tr>
-    <td>Training&nbsp;Set</td>
+  </tr>
+  <tr>
+    <td>Standard Dataset</td>
     <td>2411 compounds</td>
-  </tr><tr>
-    <td>Reference</td>
+  </tr>
+  <tr>
+    <td>Data Sources</td>
     <td>(5,7,11-15)</td>
-  </tr><tr>
-    <td>Algorithmic&nbsp;Model</td>
-    <td>Graph Attention Network (8)</td>
   </tr>
 </table>
 
-#### Nephrotoxicity
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">Nephrotoxicity</th>
-  </tr><tr>
-    <td>Predition&nbsp;Type</td>
+#### 2.4.4 Nephrotoxicity
+<div align="center">Table 9. Basic information of TCM flavor prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
+  <tr>
+    <td>Prediction Type</td>
     <td>Compounds induced nephrotoxicity</td>
-  </tr><tr>
-    <td>End&nbsp;Point</td>
+  </tr>
+  <tr>
+    <td>Algorithmic Model</td>
+    <td>Graph Attention Network (8)</td>
+  </tr>
+  <tr>
+    <td>End Point</td>
     <td>Positive/Negative</td>
-  </tr><tr>
+  </tr>
+  <tr>
     <td>Descriptors</td>
     <td>Molecular fingerprints</td>
-  </tr><tr>
-    <td>Training&nbsp;Set</td>
+  </tr>
+  <tr>
+    <td>Standard Dataset</td>
     <td>821 compounds</td>
-  </tr><tr>
-    <td>Reference</td>
+  </tr>
+  <tr>
+    <td>Data Sources</td>
     <td>(11,16-19)</td>
-  </tr><tr>
-    <td>Algorithmic&nbsp;Model</td>
-    <td>Graph Attention Network (8)</td>
   </tr>
 </table>
 
-#### Neurotoxicity
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">Neurotoxicity</th>
-  </tr><tr>
-    <td>Predition&nbsp;Type</td>
+#### 2.4.5 Neurotoxicity
+<div align="center">Table 10. Basic information of TCM neurotoxicity prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
+  <tr>
+    <td>Prediction Type</td>
     <td>Compounds induced neurotoxicity</td>
-  </tr><tr>
-    <td>End&nbsp;Point</td>
+  </tr>
+  <tr>
+    <td>Algorithmic Model</td>
+    <td>Graph Attention Network (8)</td>
+  </tr>
+  <tr>
+    <td>End Point</td>
     <td>Positive/Negative</td>
-  </tr><tr>
+  </tr>
+  <tr>
     <td>Descriptors</td>
     <td>Molecular fingerprints</td>
-  </tr><tr>
-    <td>Training&nbsp;Set</td>
+  </tr>
+  <tr>
+    <td>Standard Dataset</td>
     <td>757 compounds</td>
-  </tr><tr>
-    <td>Reference</td>
+  </tr>
+  <tr>
+    <td>Data Sources</td>
     <td>(11,16,20-22)</td>
-  </tr><tr>
-    <td>Algorithmic&nbsp;Model</td>
-    <td>Graph Attention Network (8)</td>
   </tr>
 </table>
 
-#### Respiratory Toxicity
-<table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
-  <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="2">Respiratory Toxicity</th>
-  </tr><tr>
-    <td>Predition&nbsp;Type</td>
+#### 2.4.6 Respiratory Toxicity
+<div align="center">Table 11. Basic information of TCM respiratory prediction tool</div>
+<table style={{borderCollapse: "collapse", width: "100%"}}>
+  <tr>
+    <td>Prediction Type</td>
     <td>Compounds induced respiratory toxicity</td>
-  </tr><tr>
-    <td>End&nbsp;Point</td>
+  </tr>
+  <tr>
+    <td>Algorithmic Model</td>
+    <td>Graph Attention Network (8)</td>
+  </tr>
+  <tr>
+    <td>End Point</td>
     <td>Positive/Negative</td>
-  </tr><tr>
+  </tr>
+  <tr>
     <td>Descriptors</td>
     <td>Molecular fingerprints</td>
-  </tr><tr>
-    <td>Training&nbsp;Set</td>
+  </tr>
+  <tr>
+    <td>Standard Dataset</td>
     <td>1760 compounds</td>
-  </tr><tr>
-    <td>Reference</td>
+  </tr>
+  <tr>
+    <td>Data Sources</td>
     <td>(7,23,24)</td>
-  </tr><tr>
-    <td>Algorithmic&nbsp;Model</td>
-    <td>Graph Attention Network (8)</td>
   </tr>
 </table>
 
-### 2.5 Model Datasets
+### 2.5 Standard Datasets for Model Construction and Performance Evaluation
+<div align="center">Table 12. Detailed information of the standard datasets</div>
+
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Dataset</th>
@@ -483,9 +518,9 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 
-
 ### 2.6 Model Performance
-<div align="center">Table 1. Predictive performance of TCM target organ prediction model for identifying the specific target proteins of each organ</div>
+
+<div align="center">Table 13. Predictive performance of TCM target organ prediction model </div>
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -614,7 +649,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-<div align="center">Table 2. Predictive performance of TCM target organ prediction model for TCMs</div>
+<div align="center">Table 14. Predictive performance of TCM target organ prediction model</div>
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -646,7 +681,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-<div align="center">Table 3. Predictive performance of TCM flavor prediction model</div>
+<div align="center">Table 15. Predictive performance of TCM flavor prediction model</div>
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -699,7 +734,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-<div align="center">Table 4. Predictive performance of various TCM toxicity prediction models</div>
+<div align="center">Table 16. Predictive performance of various TCM toxicity prediction models</div>
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
     <thead style={{backgroundColor: "#009999", color: "white"}}>
@@ -868,14 +903,71 @@ Depending on the number of elements entered by the user, the prediction results 
 </p>
 
 ### 3.3 Processing times
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 TCM-AIPP is capable of processing a single input of up to 3000 targets or 1000 SMILES, facilitating the prediction of the target organ of a certain target, as well as the flavor and toxicity of a certain compound. In terms of computational efficiency, when the server queue is free and the resources are sufficient, the prediction output time of a single model is controlled to be less than 1 minute, thereby meeting the requirement of efficient computation.
 </p>
 
 ### 3.4 Quick start
 
-## 4. API Tutorial
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+Users can select any tool they want to predict TCM target organs, flavors and toxicities from the left side of the Home page or the Services page. The Home page offers a more convenient option, while the Services page provides basic information about each tool.
+</p>
 
+#### 3.4.1 TCM Target Organ Prediction
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+Users can input Official Gene Symbol(s) or Entrez Gene ID(s) of one or multiple targets and click Submit to predict target organs of TCMs (click on the example to see the demo). Multiple input supports up to 3000 targets. The latest release of TCM-AIPP supports prediction of nine organs, including cerebellum, heart, kidney, liver, lung, pancreas, retina, skeletal muscle and testis.
+</p>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+For a single input, TCM-AIPP will output basic information of the input target, its related-TCM and potential target organs. For multiple inputs, TCM-AIPP provides the statistic data regarding the potential target organs of TCMs acting on the input targets, accompanied by the detailed information of TCMs and the functions and pathways involved by their effective targets according to the enrichment analysis. All results are available for download in various forms of images and tables.
+</p>
+
+#### 3.4.2 TCM Flavor Prediction
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+Users can input SMILES string(s) of one or multiple compounds and click Submit to predict TCM flavors (click on the example to see the demo). Multiple input supports up to 1000 SMILES. We advise users to standardize SMILES via PubChem or RDKit before inputting them. The latest release of TCM-AIPP supports prediction of five flavors, including Bitter, Pungent, Salty, Sour and Sweet.
+</p>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+For a single input, TCM-AIPP generates structural diagrams and potential flavors of the input compound, as well as the related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
+</p>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+For multiple inputs, TCM-AIPP provides statistical data regarding the potential flavors of all compounds in question, accompanied by their candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
+</p>
+
+**NOTE: The reliable scores of candidate targets provided herein are higher than 0.6**
+
+#### 3.4.3 TCM Toxicity Prediction
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+Users can input SMILES string(s) of one or multiple compounds and click Submit to predict TCM toxicities (click on the example to see the case). Multiple input supports up to 1000 SMILES. We advise users to standardize SMILES via PubChem or RDKit before inputting them. The latest release of TCM-AIPP supports predictions for acute toxicity and common organ toxicities including cardiotoxicity, hepatotoxicity, nephrotoxicity, neurotoxicity, and respiratory toxicity, of TCMs.
+</p>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+For a single input, TCM-AIPP generates structural diagrams and potential acute toxicity and organ toxicities of the input compound, as well as related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
+</p>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+For multiple inputs, TCM-AIPP provides statistical data regarding the potential toxicities of all compounds in question, accompanied by the candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
+</p>
+
+**NOTE: Two sampling methods were used to predict acute toxicity (see 2.4.1). For the same compound, we recommend selecting the lower grade as the reference. This approach is more conservative and is designed to avoid false negatives, which are more harmful than false positives. The reliable scores of candidate targets provided herein are higher than 0.6.**
+
+
+
+
+
+
+
+
+## 4. API Tutorial
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+For users with more advanced analytical requirements, TCM-AIPP offers a straightforward POST interface that enables data to be queried through the programming language of your choice. While the site responds quickly, there may be a slight delay in Python scripts due to the queuing of user requests. Please note that a maximum of 100 API queries can be made per source IP per day, with query intervals becoming longer as the number of requesting models increases. To run the script, the system must have Python (version 3.12 or higher) installed and executed from the command line.
+</p>
+
+**For TCM Target Organ Prediction**
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+Please enter the Official gene symbol or Entrez ID for the query in order to proceed with this command. 
+Please note: the targets should be entered with quotes and that multiple entries should be separated with commas.
+</p>
+
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+  Example:<code>python tcmaipp_api.py -m m1 -o output.csv "TP53"</code>
+</p>
 
 ## 5. References
 1.	Morselli Gysi, D., do Valle, I., Zitnik, M., Ameli, A., Gan, X., Varol, O., Ghiassian, S.D., Patten, J.J., Davey, R.A., Loscalzo, J. et al. (2021) Network medicine framework for identifying drug-repurposing opportunities for COVID-19. Proc Natl Acad Sci U S A, 118.
