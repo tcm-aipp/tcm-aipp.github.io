@@ -159,8 +159,8 @@ Two prediction models for acute toxicity were developed for different applicatio
 
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
-    <th colspan="1">Acute&nbsp;Toxicity&nbsp;Level</th>
-    <th colspan="1">GHS&nbsp;(Oral&nbsp;LD50&nbsp;mg/kg)</th>
+    <th colspan="1">Acute Toxicity Level</th>
+    <th colspan="1">GHS (Oral LD50 mg/kg)</th>
   </tr>
   <tr>
     <td>I</td>
@@ -537,7 +537,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 <div align="center">Table 13. Predictive performance of TCM target organ prediction model </div>
 
-<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
+<table style={{borderCollapse: "collapse", width: "70%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Organ</th>
     <th>Dataset</th>
@@ -666,7 +666,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 <div align="center">Table 14. Predictive performance of TCM target organ prediction model</div>
 
-<table style={{borderCollapse: "collapse", width: "90%", margin: "0 auto", textAlign: "center"}}>
+<table style={{borderCollapse: "collapse", width: "100%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Dataset</th>
     <th>Accuracy</th>
