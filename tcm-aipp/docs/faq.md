@@ -15,7 +15,7 @@ Uncovering the properties of TCM is of great importance for both clinical applic
 </p>
 
 ![](../img/introduction.png)
-<div align="center">Figure 1. Overview framework of TCM-AIPP</div>
+**<div align="center">Figure 1. Overview framework of TCM-AIPP</div>**
 
 ### 1.1 Highlights
 <p style={{ textAlign: "justify" }}>
@@ -49,7 +49,8 @@ The model was constructed based on a number of reliable data sources. Proteins s
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 To validate the performance of the model, we collected effective target data with high-quality literature support from the HIT database, which demonstrated optimal prediction quality in several models. A total of 442 TCMs with documented organ effects, as recorded in the Chinese Pharmacopoeia, were subjected to extraction of their corresponding effective targets, amounting to a total of 64,795. During the validation process, if the actual organ of target of a TCM was located in the top three organs predicted by the model (a single TCM is known to target on up to 4 organs), the prediction was considered to be a true-positive result. The model was initially validated for the four organs of the liver, heart, lungs, and kidneys (as documented in the Pharmacopoeia) and achieved a more satisfactory model performance. Subsequently, the validation was extended to encompass modeling of additional organs, including the cerebellum, pancreas, retina, skeletal muscle, and testis. Notably, with the exception of the heart-skeletal muscle, the target sets of these organs showed significant topological separation in the PPI, which further enhanced the predictive performance of the model. 
 </p>
-<div align="center">Table 1. Basic information of TCM target organ prediction tool</div>
+
+**<div align="center">Table 1. Basic information of TCM target organ prediction tool</div>**
 
 <table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr>
@@ -85,7 +86,8 @@ The flavor prediction model of TCM-AIPP was constructed using the RF algorithm. 
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Then, the flavors of TCM were predicted by weighted averaging the compounds' flavors, especially the index compounds recorded by the Chinese Pharmacopoeia 2020 and the other compounds were assigned different weights. The predictive performance of this model was evaluated based on 558 TCMs with the flavor records in the Chinese Pharmacopoeia 2020 and the corresponding 19,068 compounds obtained from BATMAN-TCM. If the actual flavors of a certain TCM are included in the top three predicted flavors of the model (it is generally known that a single TCM have up to 3 flavors), the result may be considered to be true-positive.
 </p>
-<div align="center">Table 2. Basic information of TCM flavor prediction tool</div>
+
+**<div align="center">Table 2. Basic information of TCM flavor prediction tool</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
     <td style={{backgroundColor: "#009999", color: "white"}}>Flavors</td>
@@ -123,7 +125,8 @@ The toxicity prediction model of TCM-AIPP was constructed using the GAT algorith
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Two prediction models for acute toxicity were developed for different application scenarios based on rat and mouse using the LD50 data collected from the TOXRIC database and the toxicity classification criteria referring to the Globally Harmonized System of Classification and Labelling of Chemicals. To minimize the risk of false negatives and to reduce overfitting, both the Random Oversampling and Adaptive Synthetic Sampling Algorithm (ADASYN) were used to improve the classification accuracy for a few classes of chemicals. The results of the two sampling algorithms are both available on the platform.
 </p>
-<div align="center">Table 3. Basic information of TCM acute toxicity prediction tool</div>
+
+**<div align="center">Table 3. Basic information of TCM acute toxicity prediction tool</div>**
 <table style={{borderCollapse: "collapse", width: "50%", margin: "0 auto"}}>
   <tr>
     <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
@@ -155,7 +158,7 @@ Two prediction models for acute toxicity were developed for different applicatio
   </tr>
 </table>
 
-<div align="center">Table 4. Definition of the acute toxicity levels</div>
+**<div align="center">Table 4. Definition of the acute toxicity levels</div>**
 
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -189,7 +192,7 @@ Two prediction models for acute toxicity were developed for different applicatio
 </table>
 
 
-<div align="center">Table 5. Comparison of the two sampling algorithms</div>
+**<div align="center">Table 5. Comparison of the two sampling algorithms</div>**
 <table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Feature</th>
@@ -227,7 +230,8 @@ Two prediction models for acute toxicity were developed for different applicatio
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Accumulating studies have reported the cardiotoxicity induced by drugs, which may be usually associated with the inhibition of human ether-à-go-go-related gene (hERG). hERG genes encode proteins that form potassium channels in the membranes of cardiomyocytes, which are essential for normal electrical activity of the heart, especially during the repolarization phase. Many drugs can inadvertently inhibit hERG channels, causing abnormal repolarization of the heart, which lead to arrhythmias and even sudden death. To construct the cardiotoxicity prediction model for TCM-AIPP, compounds with hERG inhibition values were obtained from the ChEMBL database and categorized into four classes of cardiotoxicity based on their IC50 value.
 </p>
-<div align="center">Table 6. Basic information of TCM cardiotoxicity prediction tool</div>
+
+**<div align="center">Table 6. Basic information of TCM cardiotoxicity prediction tool</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
     <td style={{backgroundColor: "#009999", color: "white"}}>Prediction&nbsp;Type</td>
@@ -259,7 +263,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-<div align="center">Table 7. Definition of the hERG inhibition levels</div>
+**<div align="center">Table 7. Definition of the hERG inhibition levels</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
     <th>Levels</th>
@@ -285,7 +289,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 
 #### 2.4.3 Hepatotoxicity
-<div align="center">Table 8. Basic information of TCM hepatotoxicity prediction tool</div>
+**<div align="center">Table 8. Basic information of TCM hepatotoxicity prediction tool</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
     <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
@@ -314,7 +318,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 #### 2.4.4 Nephrotoxicity
-<div align="center">Table 9. Basic information of TCM nephrotoxicity prediction tool</div>
+**<div align="center">Table 9. Basic information of TCM nephrotoxicity prediction tool</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
     <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
@@ -343,7 +347,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 #### 2.4.5 Neurotoxicity
-<div align="center">Table 10. Basic information of TCM neurotoxicity prediction tool</div>
+**<div align="center">Table 10. Basic information of TCM neurotoxicity prediction tool</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
     <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
@@ -372,7 +376,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 #### 2.4.6 Respiratory Toxicity
-<div align="center">Table 11. Basic information of TCM respiratory prediction tool</div>
+**<div align="center">Table 11. Basic information of TCM respiratory prediction tool</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto"}}>
   <tr>
     <td style={{backgroundColor: "#009999", color: "white"}}>Prediction Type</td>
@@ -401,7 +405,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 ### 2.5 Standard Datasets for Model Construction
-<div align="center">Table 12. Detailed information of the standard datasets</div>
+**<div align="center">Table 12. Detailed information of the standard datasets</div>**
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -535,7 +539,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 
 ### 2.6 Model Performance Evaluation
 
-<div align="center">Table 13. Predictive performance of TCM target organ prediction model </div>
+**<div align="center">Table 13. Predictive performance of TCM target organ prediction model </div>**
 
 <table style={{borderCollapse: "collapse", width: "70%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -664,7 +668,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-<div align="center">Table 14. Predictive performance of TCM target organ prediction model</div>
+**<div align="center">Table 14. Predictive performance of TCM target organ prediction model</div>**
 
 <table style={{borderCollapse: "collapse", width: "100%", margin: "0 auto", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -696,7 +700,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-<div align="center">Table 15. Predictive performance of TCM flavor prediction model</div>
+**<div align="center">Table 15. Predictive performance of TCM flavor prediction model</div>**
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
   <tr style={{backgroundColor: "#009999", color: "white"}}>
@@ -749,7 +753,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
   </tr>
 </table>
 
-<div align="center">Table 16. Predictive performance of various TCM toxicity prediction models</div>
+**<div align="center">Table 16. Predictive performance of various TCM toxicity prediction models</div>**
 
 <table style={{borderCollapse: "collapse", width: "100%", textAlign: "center"}}>
     <thead style={{backgroundColor: "#009999", color: "white"}}>
@@ -934,33 +938,79 @@ Users can select any tool they want to predict TCM target organs, flavors and to
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Users can input Official Gene Symbol(s) or Entrez Gene ID(s) of one or multiple targets and click Submit to predict target organs of TCMs (click on the example to see the demo). Multiple input supports up to 3000 targets. The latest release of TCM-AIPP supports prediction of nine organs, including cerebellum, heart, kidney, liver, lung, pancreas, retina, skeletal muscle and testis.
 </p>
+
+![](../img/T1.png)
+
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
-For a single input, TCM-AIPP will output basic information of the input target, its related-TCM and potential target organs. For multiple inputs, TCM-AIPP provides the statistic data regarding the potential target organs of TCMs acting on the input targets, accompanied by the detailed information of TCMs and the functions and pathways involved by their effective targets according to the enrichment analysis. All results are available for download in various forms of images and tables.
+For a single input, TCM-AIPP will output basic information of the input target, its related-TCM and potential target organs. 
 </p>
 
+![](../img/T2.png)
+![](../img/T3.png)
+缺T4-网络
+
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
+For multiple inputs, TCM-AIPP provides the statistic data regarding the potential target organs of TCMs acting on the input targets, accompanied by the detailed information of TCMs and the functions and pathways involved by their effective targets according to the enrichment analysis. All results are available for download in various forms of images and tables.
+</p>
+
+![](../img/T5.png)
+![](../img/T6.png)
+缺T7——富集
+缺T8——网络
 #### 3.4.2 TCM Flavor Prediction
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Users can input SMILES string(s) of one or multiple compounds and click Submit to predict TCM flavors (click on the example to see the demo). Multiple input supports up to 1000 SMILES. We advise users to standardize SMILES via PubChem or RDKit before inputting them. The latest release of TCM-AIPP supports prediction of five flavors, including Bitter, Pungent, Salty, Sour and Sweet.
 </p>
+
+![](../img/F1.png)
+
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For a single input, TCM-AIPP generates structural diagrams and potential flavors of the input compound, as well as the related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
 </p>
+
+缺F2-雷达
+![](../img/F3.png)
+![](../img/F4.png)
+缺F5-富集
+缺F6-网络
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For multiple inputs, TCM-AIPP provides statistical data regarding the potential flavors of all compounds in question, accompanied by their candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
 </p>
 
+缺F7-汇总
+![](../img/F3.png)
+![](../img/F8.png)
+缺F9-汇总
+缺F10-网络
 **NOTE: The reliable scores of candidate targets provided herein are higher than 0.6**
 
 #### 3.4.3 TCM Toxicity Prediction
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Users can input SMILES string(s) of one or multiple compounds and click Submit to predict TCM toxicities (click on the example to see the case). Multiple input supports up to 1000 SMILES. We advise users to standardize SMILES via PubChem or RDKit before inputting them. The latest release of TCM-AIPP supports predictions for acute toxicity and common organ toxicities including cardiotoxicity, hepatotoxicity, nephrotoxicity, neurotoxicity, and respiratory toxicity, of TCMs.
 </p>
+
+![](../img/TO1.png)
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For a single input, TCM-AIPP generates structural diagrams and potential acute toxicity and organ toxicities of the input compound, as well as related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
 </p>
+
+缺TO2-结构
+![](../img/TO3.png)
+![](../img/F4.png)
+![](../img/F3.png)
+缺TO4-富集
+缺TO-5网络
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For multiple inputs, TCM-AIPP provides statistical data regarding the potential toxicities of all compounds in question, accompanied by the candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
 </p>
+
+缺TO-6汇总
+![](../img/TO7.png)
+![](../img/F8.png)
+![](../img/F3.png)
+缺TO-8富集
+缺TO-9网络
+
 
 **NOTE: Two sampling methods were used to predict acute toxicity (see 2.4.1). For the same compound, we recommend selecting the lower grade as the reference. This approach is more conservative and is designed to avoid false negatives, which are more harmful than false positives. The reliable scores of candidate targets provided herein are higher than 0.6.**
 
