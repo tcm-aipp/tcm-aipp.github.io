@@ -24,8 +24,14 @@ Uncovering the properties of TCM is of great importance for both clinical applic
 <p style={{textAlign: "justify"}}>
 A total of three tools for predicting target organs, flavors and toxicities of TCMs were constructed and developed in the TCM-AIPP web server based on Random Forest (RF) machine learning and Graph Attention Network (GAT), respectively. These tools contain 19 prediction models, including 10 classification models and 9 regression models. For each endpoint, the dataset is randomly divided into training, validation (VAL) and test sets in the ratio of 8:1:1. The RF model is implemented using the tree ensemble learner and predictor nodes in KNIME, Gini coefficient is used for segmentation criteria, square root function is used for attribute sampling and different sets of attributes are selected for all trees. The GAT employs an Adam optimizer with hyperparameter tuning via Bayesian optimization. The regression task was assessed using the coefficient of determination (R2), root mean squared error (RMSE), and mean absolute error (MAE), whereas the classification task was evaluated based on accuracy, the area under the receiver operating characteristic (ROC-AUC) curve, Mathews correlation coefficient (MCC), precision, specificity and sensitivity. To guarantee the reliability and precision of the models, each training process was conducted 10 times, and the most effective models were then deployed to the online platform.
 </p>
+![acute](../img/acute_toxicity.jpg)
+
+
+
+
 
 ### 2.2 TCM target organ prediction
+
 <p style={{textAlign: "justify"}}>
 The TCM target organ prediction model was developed based on GAT, which aims to reveal the action tendency of TCM on different organs. The targets of TCM are complex and diverse, and their mechanisms of action are difficult to explain intuitively, so they need to be accurately predicted by systematic network analysis methods. This model can effectively predict the effects of TCM on specific organs by integrating the information of human protein-protein interaction (PPI) network (1) and the effective targets of TCM.
 </p>
