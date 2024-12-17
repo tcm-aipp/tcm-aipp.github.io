@@ -14,7 +14,7 @@ Herein, the TCM Artificial Intelligence-Powered Platform (TCM-AIPP) has been dev
 Uncovering the properties of TCM is of great importance for both clinical applications and TCM-derived drug R&D. TCM-AIPP may help to facilitate the recognition of the properties of TCMs, explain the underlying mechanisms of TCM against various human diseases, and provide guidance for TCM practitioners.
 </p>
 
-![](../img/img_home.png)
+![](../img/introduction.png)
 <div align="center">Figure 1. Overview framework of TCM-AIPP</div>
 
 ### 1.1 Highlights
@@ -86,7 +86,7 @@ The flavor prediction model of TCM-AIPP was constructed using the RF algorithm. 
 Then, the flavors of TCM were predicted by weighted averaging the compounds' flavors, especially the index compounds recorded by the Chinese Pharmacopoeia 2020 and the other compounds were assigned different weights. The predictive performance of this model was evaluated based on 558 TCMs with the flavor records in the Chinese Pharmacopoeia 2020 and the corresponding 19,068 compounds obtained from BATMAN-TCM. If the actual flavors of a certain TCM are included in the top three predicted flavors of the model (it is generally known that a single TCM have up to 3 flavors), the result may be considered to be true-positive.
 </p>
 <div align="center">Table 2. Basic information of TCM flavor prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "100%", margin: "0 auto"}}>
+<table style={{borderCollapse: "collapse", width: "50%", margin: "0 auto"}}>
   <tr>
     <td>Flavors</td>
     <td>Flavors of compounds</td>
@@ -124,7 +124,7 @@ The toxicity prediction model of TCM-AIPP was constructed using the GAT algorith
 Two prediction models for acute toxicity were developed for different application scenarios based on rat and mouse using the LD50 data collected from the TOXRIC database and the toxicity classification criteria referring to the Globally Harmonized System of Classification and Labelling of Chemicals. To minimize the risk of false negatives and to reduce overfitting, both the Random Oversampling and Adaptive Synthetic Sampling Algorithm (ADASYN) were used to improve the classification accuracy for a few classes of chemicals. The results of the two sampling algorithms are both available on the platform.
 </p>
 <div align="center">Table 3. Basic information of TCM acute toxicity prediction tool</div>
-<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
+<table style={{borderCollapse: "collapse", width: "50%", margin: "0 auto"}}>
   <tr>
     <td>Prediction Type</td>
     <td>Lethal Dose value in mg/kg body weight (Rat and Mouse)</td>
