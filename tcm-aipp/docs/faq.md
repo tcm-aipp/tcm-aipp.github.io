@@ -976,9 +976,8 @@ Please note: the targets should be entered with quotes and that multiple entries
 </p>
 
 <p style={{ textAlign: "justify"}}>
-
-    Example: 
-    <pre>python tcmaipp_api.py -m m1 -o output.csv "TP53"</pre>
+  Example: 
+  <pre><code>python tcmaipp_api.py -m m1 -o output.csv "TP53"</code></pre>
 </p>
 
 **For TCM Flavor Prediction**
@@ -988,9 +987,8 @@ Please note: the targets should be entered with quotes and that multiple entries
  </p>
 
 <p style={{ textAlign: "justify" }}>
-
-    Example: 
-    <pre>python tcmaipp_api.py -m m3 -o output.csv "CC(C)/C=C/CCCCC(=O)NCC1=CC(=C(C=C1)O)OC"</pre>
+  Example: 
+  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "CC(C)/C=C/CCCCC(=O)NCC1=CC(=C(C=C1)O)OC"</code></pre>
 </p>
 
 **For TCM Toxicity Prediction**
@@ -999,10 +997,9 @@ Please enter the SMILES strings for the query in order to proceed with this comm
 Please note: the SMILES strings should be entered with quotes and that multiple entries should be separated with commas.
 </p>
 
-<p style={{ textAlign: "justify"}}>
-
-    Example: 
-    <pre>python tcmaipp_api.py -m m3 -o output.csv "COC1=CC2=C(C=CN=C2C=C1)[C@H]([C@@H]3C[C@@H]4CCN3C[C@@H]4C=C)O"</pre>
+<p style={{ textAlign: "justify" }}>
+  Example: 
+  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "COC1=CC2=C(C=CN=C2C=C1)[C@H]([C@@H]3C[C@@H]4CCN3C[C@@H]4C=C)O"</code></pre>
 </p>
 
 
