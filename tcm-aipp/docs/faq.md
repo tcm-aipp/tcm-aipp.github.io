@@ -988,7 +988,7 @@ Please note: the targets should be entered with quotes and that multiple entries
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "CC(C)/C=C/CCCCC(=O)NCC1=CC(=C(C=C1)O)OC"</code></pre>
+  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "CC%28C%29%2FC%3DC%2FCCCCC%28%3DO%29NCC1%3DCC%28%3DC%28C%3DC1%29O%29OC"</code></pre>
 </p>
 
 **For TCM Toxicity Prediction**
@@ -999,7 +999,7 @@ Please note: the SMILES strings should be entered with quotes and that multiple 
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "COC1=CC2=C(C=CN=C2C=C1)[C@H]([C@@H]3C[C@@H]4CCN3C[C@@H]4C=C)O"</code></pre>
+  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "COC1%3DCC2%3DC%28C%3DCN%3DC2C%3DC1%29%5BC%40H%5D%28%5BC%40%40H%5D3C%5BC%40%40H%5D4CCN3C%5BC%40%40H%5D4C%3DC%29O"</code></pre>
 </p>
 
 
