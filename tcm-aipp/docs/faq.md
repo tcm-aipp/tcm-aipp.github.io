@@ -19,16 +19,16 @@ Uncovering the properties of TCM is of great importance for both clinical applic
 
 ## 1.1 Highlights
 <p style={{ textAlign: "justify" }}>
-    <strong>①</strong> TCM-AIPP is the first web server for TCM property research<br>
-    <strong>②</strong> TCM-AIPP integrated the specific characteristics of TCMs to enhance its prediction performance<br>
+    <strong>①</strong> TCM-AIPP is the first web server for TCM property research<br />
+    <strong>②</strong> TCM-AIPP integrated the specific characteristics of TCMs to enhance its prediction performance<br />
     <strong>③</strong> TCM-AIPP provides an intuitive interface and customizable network visualizations, facilitating the exploration of TCM-related bioinformation
 </p>
 
 ## 1.2 Citations
 <p style={{ textAlign: "justify" }}>
-    <strong>①</strong> Zhang Y, Li X, Shi Y, Chen T, Xu Z, Wang P, Yu M, Chen W, Li B, Jing Z, Jiang H, Fu L, Gao W, Jiang Y, Du X, Gong Z, Zhu W, Yang H, Xu H. ETCM v2.0: An update with comprehensive resource and rich annotations for traditional Chinese medicine. Acta Pharm Sin B. 2023 Jun;13(6):2559-2571. [doi: 10.1016/j.apsb.2023.03.012](https://pubmed.ncbi.nlm.nih.gov/37425046/)<br>
-    <strong>②</strong> Xu HY, Zhang YQ, Liu ZM, Chen T, Lv CY, Tang SH, Zhang XB, Zhang W, Li ZY, Zhou RR, Yang HJ, Wang XJ, Huang LQ. ETCM: an encyclopaedia of traditional Chinese medicine. Nucleic Acids Res. 2019 Jan 8;47(D1):D976-D982. [doi: 10.1093/nar/gky987](https://pubmed.ncbi.nlm.nih.gov/30365030/)<br>
-    <strong>③</strong> Zhang Y, Wang N, Du X, Chen T, Yu Z, Qin Y, Chen W, Yu M, Wang P, Zhang H, Zhou X, Huang L, Xu H. SoFDA: an integrated web platform from syndrome ontology to network-based evaluation of disease-syndrome-formula associations for precision medicine. Sci Bull (Beijing). 2022 Jun 15;67(11):1097-1101. [doi: 10.1016/j.scib.2022.03.013](https://pubmed.ncbi.nlm.nih.gov/36545970/)<br>
+    <strong>①</strong> Zhang Y, Li X, Shi Y, Chen T, Xu Z, Wang P, Yu M, Chen W, Li B, Jing Z, Jiang H, Fu L, Gao W, Jiang Y, Du X, Gong Z, Zhu W, Yang H, Xu H. ETCM v2.0: An update with comprehensive resource and rich annotations for traditional Chinese medicine. Acta Pharm Sin B. 2023 Jun;13(6):2559-2571. [doi: 10.1016/j.apsb.2023.03.012](https://pubmed.ncbi.nlm.nih.gov/37425046/)<br />
+    <strong>②</strong> Xu HY, Zhang YQ, Liu ZM, Chen T, Lv CY, Tang SH, Zhang XB, Zhang W, Li ZY, Zhou RR, Yang HJ, Wang XJ, Huang LQ. ETCM: an encyclopaedia of traditional Chinese medicine. Nucleic Acids Res. 2019 Jan 8;47(D1):D976-D982. [doi: 10.1093/nar/gky987](https://pubmed.ncbi.nlm.nih.gov/30365030/)<br />
+    <strong>③</strong> Zhang Y, Wang N, Du X, Chen T, Yu Z, Qin Y, Chen W, Yu M, Wang P, Zhang H, Zhou X, Huang L, Xu H. SoFDA: an integrated web platform from syndrome ontology to network-based evaluation of disease-syndrome-formula associations for precision medicine. Sci Bull (Beijing). 2022 Jun 15;67(11):1097-1101. [doi: 10.1016/j.scib.2022.03.013](https://pubmed.ncbi.nlm.nih.gov/36545970/)<br />
     <strong>④</strong> Liu Y, Xu J, Yu Z, Chen T, Wang N, Du X, Wang P, Zhou X, Xu H, Zhang Y. Ontology characterization, enrichment analysis, and similarity calculation-based evaluation of disease-syndrome-formula associations by applying SoFDA. Imeta. 2023 Jan 10;2(2):e80. [doi: 10.1002/imt2.80](https://pubmed.ncbi.nlm.nih.gov/38868426/)
 </p>
 
