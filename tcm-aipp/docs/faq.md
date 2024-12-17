@@ -314,8 +314,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 </table>
 
 #### 2.4.4 Nephrotoxicity
-<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
-<table style={{borderCollapse: "collapse", width: "100%"}}>
+<table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto"}}>
   <tr>
     <td>Prediction Type</td>
     <td>Compounds induced nephrotoxicity</td>
@@ -475,7 +474,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>68&nbsp;(18/65)</td>
   </tr>
   <tr>
-    <td>Flavor&nbsp;(Sour,&nbsp;Bitter,&nbsp;Sweet,&nbsp;Pungent,&nbsp;Salty)</td>
+    <td>Flavor&nbsp;(Bitter,&nbsp;Pungent,&nbsp;Salty,&nbsp;Sour,&nbsp;Sweet)</td>
     <td>1595&nbsp;(329,&nbsp;304,&nbsp;355,&nbsp;282,&nbsp;325)</td>
     <td>1276&nbsp;(263,&nbsp;243,&nbsp;284,&nbsp;226,&nbsp;260)</td>
     <td>159&nbsp;(33,&nbsp;31,&nbsp;35,&nbsp;28,&nbsp;32)</td>
@@ -546,17 +545,17 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <th>MAE</th>
   </tr>
   <tr>
-    <td rowspan="2">Liver</td>
+    <td rowspan="2">Cerebellum</td>
     <td>Validation set</td>
-    <td>0.943 ± 0.009</td>
-    <td>0.042 ± 0.003</td>
-    <td>0.031 ± 0.003</td>
+    <td>0.750 ± 0.026</td>
+    <td>0.090 ± 0.020</td>
+    <td>0.049 ± 0.002</td>
   </tr>
   <tr>
     <td>Test set</td>
-    <td>0.823 ± 0.046</td>
-    <td>0.101 ± 0.013</td>
-    <td>0.054 ± 0.007</td>
+    <td>0.705 ± 0.073</td>
+    <td>0.101 ± 0.002</td>
+    <td>0.059 ± 0.002</td>
   </tr>
   <tr>
     <td rowspan="2">Heart</td>
@@ -572,19 +571,6 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.050 ± 0.002</td>
   </tr>
   <tr>
-    <td rowspan="2">Lung</td>
-    <td>Validation set</td>
-    <td>0.793 ± 0.020</td>
-    <td>0.079 ± 0.004</td>
-    <td>0.048 ± 0.002</td>
-  </tr>
-  <tr>
-    <td>Test set</td>
-    <td>0.751 ± 0.002</td>
-    <td>0.062 ± 0.001</td>
-    <td>0.041 ± 0.002</td>
-  </tr>
-  <tr>
     <td rowspan="2">Kidney</td>
     <td>Validation set</td>
     <td>0.841 ± 0.047</td>
@@ -598,30 +584,43 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.062 ± 0.010</td>
   </tr>
   <tr>
-    <td rowspan="2">Testis</td>
+    <td rowspan="2">Liver</td>
     <td>Validation set</td>
-    <td>0.877 ± 0.033</td>
-    <td>0.161 ± 0.024</td>
-    <td>0.129 ± 0.013</td>
+    <td>0.943 ± 0.009</td>
+    <td>0.042 ± 0.003</td>
+    <td>0.031 ± 0.003</td>
   </tr>
   <tr>
     <td>Test set</td>
-    <td>0.869 ± 0.031</td>
-    <td>0.166 ± 0.022</td>
-    <td>0.136 ± 0.013</td>
+    <td>0.823 ± 0.046</td>
+    <td>0.101 ± 0.013</td>
+    <td>0.054 ± 0.007</td>
   </tr>
   <tr>
-    <td rowspan="2">Cerebellum</td>
+    <td rowspan="2">Lung</td>
     <td>Validation set</td>
-    <td>0.750 ± 0.026</td>
-    <td>0.090 ± 0.020</td>
-    <td>0.049 ± 0.002</td>
+    <td>0.793 ± 0.020</td>
+    <td>0.079 ± 0.004</td>
+    <td>0.048 ± 0.002</td>
   </tr>
   <tr>
     <td>Test set</td>
-    <td>0.705 ± 0.073</td>
-    <td>0.101 ± 0.002</td>
-    <td>0.059 ± 0.002</td>
+    <td>0.751 ± 0.002</td>
+    <td>0.062 ± 0.001</td>
+    <td>0.041 ± 0.002</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Pancreas</td>
+    <td>Validation set</td>
+    <td>0.836 ± 0.007</td>
+    <td>0.070 ± 0.002</td>
+    <td>0.034 ± 0.001</td>
+  </tr>
+  <tr>
+    <td>Test set</td>
+    <td>0.739 ± 0.027</td>
+    <td>0.108 ± 0.006</td>
+    <td>0.046 ± 0.001</td>
   </tr>
   <tr>
     <td rowspan="2">Retina</td>
@@ -650,17 +649,17 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.051 ± 0.001</td>
   </tr>
   <tr>
-    <td rowspan="2">Pancreas</td>
+    <td rowspan="2">Testis</td>
     <td>Validation set</td>
-    <td>0.836 ± 0.007</td>
-    <td>0.070 ± 0.002</td>
-    <td>0.034 ± 0.001</td>
+    <td>0.877 ± 0.033</td>
+    <td>0.161 ± 0.024</td>
+    <td>0.129 ± 0.013</td>
   </tr>
   <tr>
     <td>Test set</td>
-    <td>0.739 ± 0.027</td>
-    <td>0.108 ± 0.006</td>
-    <td>0.046 ± 0.001</td>
+    <td>0.869 ± 0.031</td>
+    <td>0.166 ± 0.022</td>
+    <td>0.136 ± 0.013</td>
   </tr>
 </table>
 
