@@ -358,7 +358,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>Graph Attention Network (8)</td>
   </tr>
   <tr>
-    <td style={{backgroundColor: "#009999", color: "white"}}></strong>End Point<strong></td>
+    <td style={{backgroundColor: "#009999", color: "white"}}><strong>End Point</strong></td>
     <td>Positive/Negative</td>
   </tr>
   <tr>
