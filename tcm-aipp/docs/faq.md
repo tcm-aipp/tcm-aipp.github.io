@@ -942,12 +942,12 @@ Users can input Official Gene Symbol(s) or Entrez Gene ID(s) of one or multiple 
 ![](../img/T1.png)
 
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
-For a single input, TCM-AIPP will output basic information of the input target, its related-TCM and potential target organs. 
+For a single input, TCM-AIPP will output basic information of the input target, its related-TCM and potential target organs. Additionally, the system enables the visualization of the network of neighboring targets that interact with the input targets.
 </p>
 
 ![](../img/T2.png)
 ![](../img/T3.png)
-缺T4-网络
+![](../img/T4.png)
 
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For multiple inputs, TCM-AIPP provides the statistic data regarding the potential target organs of TCMs acting on the input targets, accompanied by the detailed information of TCMs and the functions and pathways involved by their effective targets according to the enrichment analysis. All results are available for download in various forms of images and tables.
@@ -968,7 +968,7 @@ Users can input SMILES string(s) of one or multiple compounds and click Submit t
 For a single input, TCM-AIPP generates structural diagrams and potential flavors of the input compound, as well as the related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
 </p>
 
-缺F2-雷达
+![](../img/F2.png)
 ![](../img/F3.png)
 ![](../img/F4.png)
 缺F5-富集
@@ -977,10 +977,10 @@ For a single input, TCM-AIPP generates structural diagrams and potential flavors
 For multiple inputs, TCM-AIPP provides statistical data regarding the potential flavors of all compounds in question, accompanied by their candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
 </p>
 
-缺F7-汇总
+![](../img/F7.png)
 ![](../img/F3.png)
 ![](../img/F8.png)
-缺F9-汇总
+缺F9-富集
 缺F10-网络
 **NOTE: The reliable scores of candidate targets provided herein are higher than 0.6**
 
@@ -994,7 +994,7 @@ Users can input SMILES string(s) of one or multiple compounds and click Submit t
 For a single input, TCM-AIPP generates structural diagrams and potential acute toxicity and organ toxicities of the input compound, as well as related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
 </p>
 
-缺TO2-结构
+![](../img/TO2.png)
 ![](../img/TO3.png)
 ![](../img/F4.png)
 ![](../img/F3.png)
@@ -1004,7 +1004,7 @@ For a single input, TCM-AIPP generates structural diagrams and potential acute t
 For multiple inputs, TCM-AIPP provides statistical data regarding the potential toxicities of all compounds in question, accompanied by the candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
 </p>
 
-缺TO-6汇总
+![](../img/TO6.png)
 ![](../img/TO7.png)
 ![](../img/F8.png)
 ![](../img/F3.png)
@@ -1016,40 +1016,38 @@ For multiple inputs, TCM-AIPP provides statistical data regarding the potential 
 
 ## 4. API Tutorial
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
-For users with more advanced analytical requirements, TCM-AIPP offers a straightforward POST interface that enables data to be queried through the programming language of your choice. While the site responds quickly, there may be a slight delay in Python scripts due to the queuing of user requests. Please note that a maximum of 100 API queries can be made per source IP per day, with query intervals becoming longer as the number of requesting models increases. To run the script, the system must have Python (version 3.12 or higher) installed and executed from the command line.
+
+For users with more advanced analytical requirements, TCM-AIPP offers a straightforward POST interface that enables data to be queried through the programming language of your choice. While the site responds quickly, there may be a slight delay in Python scripts due to the queuing of user requests. Please note that a maximum of 100 API queries can be made per source IP per day, with query intervals becoming longer as the number of requesting models increases. To run the script, the system must have Python (version 3.12 or higher) installed and executed from the command line.You can download this script to your local computer and use it, or write your own with the script as a reference: [Sample API Script](https://raw.githubusercontent.com/tcm-aipp/tcm-aipp.github.io/refs/heads/main/tcm-aipp/src/scripts/tcmaipp_api.py)
 </p>
 
 **For TCM Target Organ Prediction**
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Please enter the Official gene symbol or Entrez ID for the query in order to proceed with this command. 
-Please note: the targets should be entered with quotes and that multiple entries should be separated with commas.
 </p>
 
 <p style={{ textAlign: "justify"}}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m1 -o output.csv "Target"</code></pre>
+  <pre><code>python tcmaipp_api.py -m m1 -o output.csv Target</code></pre>
 </p>
 
 **For TCM Flavor Prediction**
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
  Please enter the SMILES strings for the query in order to proceed with this command. 
- Please note: the SMILES strings should be entered with quotes and that multiple entries should be separated with commas.
  </p>
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m2 -o output.csv "SMILES"</code></pre>
+  <pre><code>python tcmaipp_api.py -m m2 -o output.csv SMILES</code></pre>
 </p>
 
 **For TCM Toxicity Prediction**
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Please enter the SMILES strings for the query in order to proceed with this command. 
-Please note: the SMILES strings should be entered with quotes and that multiple entries should be separated with commas.
 </p>
 
 <p style={{ textAlign: "justify" }}>
   Example: 
-  <pre><code>python tcmaipp_api.py -m m3 -o output.csv "SMILES"</code></pre>
+  <pre><code>python tcmaipp_api.py -m m3 -o output.csv SMILES</code></pre>
 </p>
 
 ## 5. Acknowledgement
