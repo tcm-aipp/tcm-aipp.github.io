@@ -157,6 +157,7 @@ Two prediction models for acute toxicity were developed for different applicatio
     <td>(7)</td>
   </tr>
 </table>
+</br>
 
 **<div align="center">Table 4. Definition of the acute toxicity levels</div>**
 
@@ -190,7 +191,7 @@ Two prediction models for acute toxicity were developed for different applicatio
     <td>&gt; 5000</td>
   </tr>
 </table>
-
+</br>
 
 **<div align="center">Table 5. Comparison of the two sampling algorithms</div>**
 <table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
@@ -262,6 +263,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>(9,10)</td>
   </tr>
 </table>
+</br>
 
 **<div align="center">Table 7. Definition of the hERG inhibition levels</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto", textAlign: "center"}}>
@@ -667,6 +669,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.136 ± 0.013</td>
   </tr>
 </table>
+</br>
 
 **<div align="center">Table 14. Predictive performance of TCM target organ prediction model</div>**
 
@@ -699,6 +702,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.969&nbsp;±&nbsp;0.020</td>
   </tr>
 </table>
+</br>
 
 **<div align="center">Table 15. Predictive performance of TCM flavor prediction model</div>**
 
@@ -752,6 +756,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.980&nbsp;±&nbsp;0.030</td>
   </tr>
 </table>
+</br>
 
 **<div align="center">Table 16. Predictive performance of various TCM toxicity prediction models</div>**
 
@@ -912,12 +917,12 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
 ## 3. User Guide
 
 ### 3.1 Input information
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 The TCM-AIPP web server provides an intuitive and user-friendly interactive interface for users to easily enter official gene symbols individually or in batches to predict target organs or Simplified Molecular-Input Line Entry System (SMILES) strings of compounds to predict their flavors, acute toxicities, and organ toxicities. 
 </p>
 
 ### 3.2 Output information
-<p style={{textAlign: "justify"}}>
+<p style={{ textAlign: "justify", textIndent: "2em" }}>
 Depending on the number of elements entered by the user, the prediction results will be presented in the browser in the form of diversified charts and tables. In the target organ prediction interface, when the user enters a single gene, the system provides information on the related TCMs of the gene, the prediction results of the target organ, and the secondary network interacting with the input gene; if multiple genes are entered in a batch, the results include a summary of the target organ classification of all the genes, the related TCMs, and information on TCMs significantly enriched according to their effective targets. The flavor or toxicity prediction webpage provides the flavor, acute toxicity, organ toxicity prediction results of compounds, related TCMs, candidate targets, and biological function enrichment analysis based on the input SMILES. For batch input, the result will present a categorized summary of all prediction results, information on related TCMs and significantly enriched according to the components contained in the TCMs, candidate targets and corresponding biological function enrichment analysis, and support network visualization to clearly show the relationship between TCMs-compounds-targets. The methodologies employed for target prediction and enrichment analysis have been previously delineated in our research publications (25). The new server allows users to download the results in several file formats: .csv, .png, .svg, and .sif (which supports linking to Cytoscape for further customization and analysis). 
 </p>
 
