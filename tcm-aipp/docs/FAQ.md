@@ -14,7 +14,7 @@ Herein, the TCM Artificial Intelligence-Powered Platform (TCM-AIPP) has been dev
 Uncovering the properties of TCM is of great importance for both clinical applications and TCM-derived drug R&D. TCM-AIPP may help to facilitate the recognition of the properties of TCMs, explain the underlying mechanisms of TCM against various human diseases, and provide guidance for TCM practitioners.
 </p>
 
-![](../img/introduction.png)
+![](../img/introduction.jpg)
 **<div align="center">Figure 1. Overview framework of TCM-AIPP</div>**
 
 ### 1.1 Highlights
@@ -937,56 +937,57 @@ TCM-AIPP is capable of processing a single input of up to 3000 targets or 1000 S
 Users can select any tool they want to predict TCM target organs, flavors and toxicities from the left side of the Home page or the Services page. The Home page offers a more convenient option, while the Services page provides basic information about each tool.
 </p>
 
-![](../img/Q1.png)
+![](../img/Q1.jpg)
 
 #### 3.4.1 TCM Target Organ Prediction
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Users can input Official Gene Symbol(s) or Entrez Gene ID(s) of one or multiple targets and click Submit to predict target organs of TCMs (click on the example to see the demo). Multiple input supports up to 3000 targets. The latest release of TCM-AIPP supports prediction of nine organs, including cerebellum, heart, kidney, liver, lung, pancreas, retina, skeletal muscle and testis.
 </p>
 
-![](../img/T1.png)
+![](../img/T1.jpg)
 
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For a single input, TCM-AIPP will output basic information of the input target, its related-TCM and potential target organs. Additionally, the system enables the visualization of the network of neighboring targets that interact with the input targets.
 </p>
 
-![](../img/T2.png)
-![](../img/T3.png)
-![](../img/T4.png)
+![](../img/T2.jpg)
+![](../img/T3.jpg)
+![](../img/T4.jpg)
 
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For multiple inputs, TCM-AIPP provides the statistic data regarding the potential target organs of TCMs acting on the input targets, accompanied by the detailed information of TCMs and the functions and pathways involved by their effective targets according to the enrichment analysis. All results are available for download in various forms of images and tables.
 </p>
 
-![](../img/T5.png)
-![](../img/T6.png)
-缺T7——富集
+![](../img/T5.jpg)
+![](../img/T6.jpg)
+![](../img/T7.jpg)
 ![](../img/T8.jpg)
+
 #### 3.4.2 TCM Flavor Prediction
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Users can input SMILES string(s) of one or multiple compounds and click Submit to predict TCM flavors (click on the example to see the demo). Multiple input supports up to 1000 SMILES. We advise users to standardize SMILES via PubChem or RDKit before inputting them. The latest release of TCM-AIPP supports prediction of five flavors, including Bitter, Pungent, Salty, Sour and Sweet.
 </p>
 
-![](../img/F1.png)
+![](../img/F1.jpg)
 
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For a single input, TCM-AIPP generates structural diagrams and potential flavors of the input compound, as well as the related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
 </p>
 
-![](../img/F2.png)
-![](../img/F3.png)
-![](../img/F4.png)
-缺F5-富集
-缺F6-网络
+![](../img/F2.jpg)
+![](../img/F3.jpg)
+![](../img/F4.jpg)
+![](../img/F5.jpg)
+
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For multiple inputs, TCM-AIPP provides statistical data regarding the potential flavors of all compounds in question, accompanied by their candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
 </p>
 
-![](../img/F7.png)
-![](../img/F3.png)
-![](../img/F8.png)
-缺F9-富集
-缺F10-网络
+![](../img/F7.jpg)
+![](../img/F3.jpg)
+![](../img/F8.jpg)
+![](../img/F5.jpg)
+
 **NOTE: The reliable scores of candidate targets provided herein are higher than 0.6**
 
 #### 3.4.3 TCM Toxicity Prediction
@@ -994,27 +995,26 @@ For multiple inputs, TCM-AIPP provides statistical data regarding the potential 
 Users can input SMILES string(s) of one or multiple compounds and click Submit to predict TCM toxicities (click on the example to see the case). Multiple input supports up to 1000 SMILES. We advise users to standardize SMILES via PubChem or RDKit before inputting them. The latest release of TCM-AIPP supports predictions for acute toxicity and common organ toxicities including cardiotoxicity, hepatotoxicity, nephrotoxicity, neurotoxicity, and respiratory toxicity, of TCMs.
 </p>
 
-![](../img/TO1.png)
+![](../img/TO1.jpg)
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For a single input, TCM-AIPP generates structural diagrams and potential acute toxicity and organ toxicities of the input compound, as well as related TCM and candidate targets. Additionally, TCM-AIPP also provides functions and pathways enriched by its candidate targets.
 </p>
 
-![](../img/TO2.png)
-![](../img/TO3.png)
-![](../img/F4.png)
-![](../img/F3.png)
-缺TO4-富集
-缺TO-5网络
+![](../img/TO2.jpg)
+![](../img/TO3.jpg)
+![](../img/F4.jpg)
+![](../img/F3.jpg)
+![](../img/F5.jpg)
+
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 For multiple inputs, TCM-AIPP provides statistical data regarding the potential toxicities of all compounds in question, accompanied by the candidate targets and the involved functions and pathways. Moreover, TCM-AIPP also lists TCMs containing the input compounds through enrichment analysis based on the SMILES Strings. All results are available for download in various forms of images and tables.
 </p>
 
-![](../img/TO6.png)
-![](../img/TO7.png)
-![](../img/F8.png)
-![](../img/F3.png)
-缺TO-8富集
-缺TO-9网络
+![](../img/TO6.jpg)
+![](../img/TO7.jpg)
+![](../img/F8.jpg)
+![](../img/F3.jpg)
+![](../img/F5.jpg)
 
 
 **NOTE: Two sampling methods were used to predict acute toxicity (see 2.4.1). For the same compound, we recommend selecting the lower grade as the reference. This approach is more conservative and is designed to avoid false negatives, which are more harmful than false positives. The reliable scores of candidate targets provided herein are higher than 0.6.**
