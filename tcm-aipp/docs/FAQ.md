@@ -961,7 +961,7 @@ For multiple inputs, TCM-AIPP provides the statistic data regarding the potentia
 ![](../img/T5.png)
 ![](../img/T6.png)
 缺T7——富集
-缺T8——网络
+![](../img/T8.jpg)
 #### 3.4.2 TCM Flavor Prediction
 <p style={{ textAlign: "justify", textIndent: "2em" }}>
 Users can input SMILES string(s) of one or multiple compounds and click Submit to predict TCM flavors (click on the example to see the demo). Multiple input supports up to 1000 SMILES. We advise users to standardize SMILES via PubChem or RDKit before inputting them. The latest release of TCM-AIPP supports prediction of five flavors, including Bitter, Pungent, Salty, Sour and Sweet.
