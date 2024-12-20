@@ -157,7 +157,7 @@ Two prediction models for acute toxicity were developed for different applicatio
     <td>(7)</td>
   </tr>
 </table>
-</br>
+<br /> 
 
 **<div align="center">Table 4. Definition of the acute toxicity levels</div>**
 
@@ -191,7 +191,7 @@ Two prediction models for acute toxicity were developed for different applicatio
     <td>&gt; 5000</td>
   </tr>
 </table>
-</br>
+<br /> 
 
 **<div align="center">Table 5. Comparison of the two sampling algorithms</div>**
 <table style={{borderCollapse: "collapse", width: "80%", margin: "0 auto", textAlign: "center"}}>
@@ -263,7 +263,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>(9,10)</td>
   </tr>
 </table>
-</br>
+<br /> 
 
 **<div align="center">Table 7. Definition of the hERG inhibition levels</div>**
 <table style={{borderCollapse: "collapse", width: "40%", margin: "0 auto", textAlign: "center"}}>
@@ -669,7 +669,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.136 ± 0.013</td>
   </tr>
 </table>
-</br>
+<br /> 
 
 **<div align="center">Table 14. Predictive performance of TCM target organ prediction model</div>**
 
@@ -702,7 +702,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.969&nbsp;±&nbsp;0.020</td>
   </tr>
 </table>
-</br>
+<br /> 
 
 **<div align="center">Table 15. Predictive performance of TCM flavor prediction model</div>**
 
@@ -756,7 +756,7 @@ Accumulating studies have reported the cardiotoxicity induced by drugs, which ma
     <td>0.980&nbsp;±&nbsp;0.030</td>
   </tr>
 </table>
-</br>
+<br /> 
 
 **<div align="center">Table 16. Predictive performance of various TCM toxicity prediction models</div>**
 
